@@ -14,16 +14,17 @@ onMounted(() => {
       <div class="hero-text-area">
         <h2 class="greeting">Olá, eu sou</h2>
         <h1 class="name">Marllon Fernandes</h1>
-        <h3 class="role">Arquiteto de Soluções &amp; Engenheiro de Software Senior</h3>
+        <h3 class="role">Transformo tecnologia em resultado para o seu negócio</h3>
 
         <p class="description">
-          Arquitetura e Desenvolvimento de Soluções de Ponta a Ponta. 18 anos entregando sistemas seguros e escaláveis.
-          Especialista em Cloud, infraestruturas On-premise e Inteligência Artificial — combinando LLMs e Agentes de IA
-          para criar produtos digitais mais inteligentes e que acompanham o crescimento do seu negócio.
+          Sua empresa merece software que escala, infraestrutura que não para e inteligência artificial
+          que realmente funciona. Com 18 anos de experiência, projeto e entrego soluções em Cloud,
+          microsserviços e IA — para que você foque no crescimento enquanto a tecnologia trabalha por você.
         </p>
 
         <div class="cta-group">
-          <a href="#services" class="btn btn-primary">Serviços</a>
+          <a href="https://wa.me/5511966464979" target="_blank" rel="noopener" class="btn btn-primary">Quero uma solução</a>
+          <a href="#social-proof" class="btn btn-secondary">Ver resultados</a>
         </div>
       </div>
 
