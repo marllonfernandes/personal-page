@@ -1,10 +1,7 @@
 <script setup>
 import Hero from './components/Hero.vue'
-import SocialProof from './components/SocialProof.vue'
-import ExperienceSection from './components/ExperienceSection.vue'
 import Expertise from './components/Expertise.vue'
 import Services from './components/Services.vue'
-import Consulting from './components/Consulting.vue'
 import Contact from './components/Contact.vue'
 import WhatsAppButton from './components/WhatsAppButton.vue'
 import FooterSection from './components/FooterSection.vue'
@@ -14,11 +11,8 @@ import FooterSection from './components/FooterSection.vue'
   <div class="app-wrapper">
     <main>
       <Hero />
-      <SocialProof />
-      <ExperienceSection />
       <Expertise />
       <Services />
-      <Consulting />
       <Contact />
     </main>
     <FooterSection />

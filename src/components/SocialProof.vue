@@ -116,15 +116,15 @@ onUnmounted(() => {
       <!-- Section header -->
       <div class="section-header">
         <span class="section-tag">Resultados & Impacto</span>
-        <h2 class="section-title">18 anos construindo soluções reais</h2>
+        <h2 class="section-title">Nossa expertise em números</h2>
         <p class="section-subtitle">
-          Cada número abaixo representa um projeto real, um prazo cumprido e um negócio que dependia do resultado.
-          Experiência não se fabrica — se acumula entrega por entrega.
+          Cada número representa um projeto real, um prazo cumprido e um negócio que dependia do resultado.
+          Experiência que se acumula entrega por entrega — e agora trabalhando para o seu negócio.
         </p>
       </div>
 
       <!-- Metrics grid -->
-      <div class="metrics-grid">
+      <!-- <div class="metrics-grid">
         <div v-for="(metric, index) in metrics" :key="index" class="metric-card">
           <div class="metric-icon" v-html="metric.icon"></div>
           <div class="metric-value">
@@ -133,7 +133,7 @@ onUnmounted(() => {
           <div class="metric-label">{{ metric.label }}</div>
           <div class="metric-description">{{ metric.description }}</div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Achievements -->
       <div class="achievements-wrapper">
@@ -150,21 +150,21 @@ onUnmounted(() => {
       <div class="anchor-quote">
         <div class="quote-bar"></div>
         <blockquote>
-          "Toda experiência foi conquistada na prática — em projetos reais, com deadlines reais
-          e negócios reais dependendo do resultado."
+          "Nossa missão é transformar desafios tecnológicos complexos em soluções que geram resultado real
+          — com a seriedade de quem sabe o que está fazendo."
         </blockquote>
-        <p class="quote-author">— Marllon Fernandes, Arquiteto de Soluções</p>
+        <!-- <p class="quote-author">— Marllon Fernandes, Fundador & Arquiteto de Soluções</p> -->
       </div>
 
       <!-- Future testimonials placeholder -->
       <div class="testimonials-area">
         <div class="testimonial-label">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          Depoimentos de clientes em breve
+          Cases de clientes em breve
         </div>
         <p class="testimonial-hint">
-          Iniciando serviços de consultoria em 2025. Os primeiros clientes receberão atenção
-          dedicada e acompanhamento próximo para garantir resultados excepcionais.
+          Estamos iniciando os primeiros projetos da consultoria. Seja um dos primeiros clientes e
+          tenha atenção dedicada e acompanhamento próximo para garantir resultados excepcionais.
         </p>
         <a href="https://wa.me/5511966464979" target="_blank" rel="noopener" class="testimonial-cta">
           Seja um dos primeiros — fale agora

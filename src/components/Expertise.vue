@@ -2,32 +2,32 @@
 const expertise = [
   {
     title: 'Construir Aplicações Sólidas',
-    description: 'Desenvolvimento de sistemas robustos, escaláveis e resilientes com boas práticas de engenharia de software e foco em qualidade.',
+    description: 'Desenvolvemos sistemas robustos, escaláveis e resilientes com boas práticas de engenharia de software e foco em qualidade.',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`
   },
   {
     title: 'Migração para Microsserviços',
-    description: 'Transformação de aplicações monolíticas em arquiteturas de microsserviços, garantindo desacoplamento, autonomia e facilidade de manutenção.',
+    description: 'Transformamos aplicações monolíticas em arquiteturas de microsserviços, garantindo desacoplamento, autonomia e facilidade de manutenção.',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>`
   },
   {
     title: 'Cloud Migration (On-Premise → Cloud)',
-    description: 'Projeção e execução de migrações de ambientes On Premise para nuvem pública, com foco em segurança, custo e performance.',
+    description: 'Projetamos e executamos migrações de ambientes On Premise para nuvem pública, com foco em segurança, custo e performance.',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><polyline points="12 12 12 18"/><polyline points="9 15 12 12 15 15"/></svg>`
   },
   {
     title: 'Arquiteturas de Referência',
-    description: 'Elaboração de arquiteturas de referência para evolução das plataformas, definindo padrões técnicos e guias estratégicos de longo prazo.',
+    description: 'Elaboramos arquiteturas de referência para evolução das plataformas, definindo padrões técnicos e guias estratégicos de longo prazo.',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>`
   },
   {
     title: 'Hands-on em Projetos Estratégicos',
-    description: 'Atuação direta e colaborativa em projetos estratégicos, alinhado ao time de desenvolvimento para garantir entrega com qualidade e agilidade.',
+    description: 'Atuamos de forma direta e colaborativa em projetos estratégicos, alinhados ao time de desenvolvimento para garantir entrega com qualidade e agilidade.',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
   },
   {
     title: 'Modernização de Sistemas',
-    description: 'Alavancagem da modernização tecnológica de sistemas legados, adotando novas stacks, padrões de design e práticas de engenharia modernas.',
+    description: 'Alavancamos a modernização tecnológica de sistemas legados, adotando novas stacks, padrões de design e práticas de engenharia modernas.',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`
   }
 ];
@@ -38,9 +38,9 @@ const expertise = [
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Especialidades</span>
-        <h2 class="section-title">Como Posso Ajudar</h2>
+        <h2 class="section-title">Onde Somos Referência</h2>
         <p class="section-subtitle">
-          Atuo de forma estratégica e técnica para transformar desafios complexos em soluções escaláveis e modernas.
+          Atuamos de forma estratégica e técnica para transformar desafios complexos em soluções escaláveis e modernas.
         </p>
       </div>
 
