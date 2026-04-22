@@ -1,6 +1,6 @@
-# Personal Page Project
+# CognitivaTech Project
 
-This project is a modern personal page built with Vue.js 3 and Vite, designed for high performance and scalability on Google Cloud Platform (GCP).
+This project is a modern page built with Vue.js 3 and Vite, designed for high performance and scalability on Google Cloud Platform (GCP).
 
 ## 🚀 Local Development
 
