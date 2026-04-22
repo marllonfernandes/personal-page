@@ -20,8 +20,8 @@ const currentYear = new Date().getFullYear();
           <a href="#home">Início</a>
           <a href="#expertise">Especialidades</a>
           <a href="#services">Serviços</a>
-          <a href="#consulting">Consultoria</a>
-          <a href="#contact">Contato</a>
+          <!-- <a href="#consulting">Consultoria</a> -->
+          <!-- <a href="#contact">Contato</a> -->
         </div>
       </div>
 
