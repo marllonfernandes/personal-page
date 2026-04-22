@@ -7,10 +7,10 @@ const currentYear = new Date().getFullYear();
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">
-          <h3>Marllon Fernandes</h3>
-          <p>Arquiteto de Soluções & Engenheiro de Software</p>
+          <h3>CognitivaTech</h3>
+          <p>Consultoria de TI &amp; Engenharia de Software</p>
           <div class="contact-info">
-            <a href="mailto:marllon.mfb@gmail.com">marllon.mfb@gmail.com</a>
+            <a href="mailto:cognitivatech4@gmail.com">cognitivatech4@gmail.com</a>
             <span>•</span>
             <a href="tel:+5511966464979">(11) 96646-4979</a>
           </div>
@@ -42,7 +42,7 @@ const currentYear = new Date().getFullYear();
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; {{ currentYear }} Marllon Fernandes. Todos os direitos reservados.</p>
+        <p>&copy; {{ currentYear }} CognitivaTech. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>

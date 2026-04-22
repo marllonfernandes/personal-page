@@ -1,5 +1,5 @@
 <script setup>
-const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '5511999999999';
+const whatsappNumber = '5511966464979';
 const message = 'Olá Marllon! Acessei sua página pessoal e gostaria de conversar sobre um projeto.';
 const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 </script>

@@ -9,16 +9,16 @@
 
         <h2 class="contact-title">
           Vamos conversar sobre<br />
-          <span class="highlight">o seu negócio?</span>
+          <span class="highlight">o seu projeto?</span>
         </h2>
 
         <p class="contact-text">
-          Seja para tirar uma dúvida, entender como a tecnologia pode impulsionar sua empresa
-          ou iniciar um projeto juntos — estou disponível para uma conversa sem compromisso.
+          Seja para entender como a tecnologia pode impulsionar sua empresa,
+          tirar dúvidas sobre um projeto ou iniciar uma parceria — estamos disponíveis para uma conversa sem compromisso.
         </p>
 
         <div class="contact-actions">
-          <a href="mailto:marllon.mfb@gmail.com" class="btn btn-email">
+          <a href="mailto:cognitivatech4@gmail.com" class="btn btn-email">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -39,13 +39,13 @@
         </div>
 
         <div class="contact-info">
-          <a href="mailto:marllon.mfb@gmail.com" class="info-link">
+          <a href="mailto:cognitivatech4@gmail.com" class="info-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
             </svg>
-            marllon.mfb@gmail.com
+            cognitivatech4@gmail.com
           </a>
           <span class="separator">·</span>
           <a href="tel:+5511966464979" class="info-link">
