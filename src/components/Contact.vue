@@ -116,7 +116,7 @@ const submitForm = async () => {
           <div class="form-actions">
             <button type="submit" class="btn btn-submit" :disabled="isSubmitting || !isFormValid">
               <span v-if="isSubmitting">Enviando...</span>
-              <span v-else>Agendar Conversa Gratuita</span>
+              <span v-else>Solicitar Contato</span>
             </button>
             <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consultoria+CognitivaTech&details=Reuni%C3%A3o+de+diagn%C3%B3stico+com+a+CognitivaTech.&add=cognitivatech4@gmail.com" target="_blank" rel="noopener" class="btn btn-calendar">
               <img src="/google_calendar.png" alt="Google Calendar" width="18" height="18" />
