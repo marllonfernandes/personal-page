@@ -13,20 +13,25 @@ COPY . .
 # Build the project
 RUN npm run build
 
-# Stage 2: Serve the application with Nginx
-FROM nginx:alpine
+# Stage 2: Serve the application and API
+FROM node:20-alpine
 
-# Remove default nginx static assets
-RUN rm -rf /usr/share/nginx/html/*
+WORKDIR /app
+COPY package*.json ./
+# Install only production dependencies
+RUN npm ci --omit=dev
 
 # Copy built assets from builder stage
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist ./dist
 
-# Copy custom Nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy backend server script
+COPY server.js .
 
 # Expose port (Cloud Run uses 8080 by default)
 EXPOSE 8080
 
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Set environment to production
+ENV NODE_ENV=production
+
+# Start Node.js server
+CMD ["node", "server.js"]
