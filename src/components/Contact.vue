@@ -113,10 +113,16 @@ const submitForm = async () => {
             <input type="tel" id="phone" v-model="form.phone" required placeholder="Seu WhatsApp (com DDD)" class="form-input" :class="{ 'input-invalid': form.phone && !isPhoneValid }">
             <span v-if="form.phone && !isPhoneValid" class="field-error">Telefone inválido</span>
           </div>
-          <button type="submit" class="btn btn-submit" :disabled="isSubmitting || !isFormValid">
-            <span v-if="isSubmitting">Enviando...</span>
-            <span v-else>Agendar Conversa Gratuita</span>
-          </button>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-submit" :disabled="isSubmitting || !isFormValid">
+              <span v-if="isSubmitting">Enviando...</span>
+              <span v-else>Agendar Conversa Gratuita</span>
+            </button>
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consultoria+CognitivaTech&details=Reuni%C3%A3o+de+diagn%C3%B3stico+com+a+CognitivaTech.&add=cognitivatech4@gmail.com" target="_blank" rel="noopener" class="btn btn-calendar">
+              <img src="/google_calendar.png" alt="Google Calendar" width="18" height="18" />
+              Agendar no Google Calendar
+            </a>
+          </div>
           
           <p v-if="submitError" class="error-msg">{{ submitError }}</p>
         </form>
@@ -320,6 +326,29 @@ const submitForm = async () => {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.btn-calendar {
+  width: 100%;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: inherit;
+  backdrop-filter: blur(8px);
+}
+
+.btn-calendar:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
 }
 
 .error-msg {
