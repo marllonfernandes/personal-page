@@ -15,14 +15,6 @@ const currentYear = new Date().getFullYear();
             <a href="tel:+5511966464979">(11) 96646-4979</a>
           </div>
         </div>
-
-        <div class="footer-links">
-          <a href="#home">Início</a>
-          <a href="#expertise">Especialidades</a>
-          <a href="#services">Serviços</a>
-          <!-- <a href="#consulting">Consultoria</a> -->
-          <!-- <a href="#contact">Contato</a> -->
-        </div>
       </div>
 
       <!-- GCP Certification badge -->

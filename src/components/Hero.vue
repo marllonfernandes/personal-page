@@ -18,21 +18,17 @@ onMounted(() => {
     <div class="container hero-content" :class="{ 'visible': showContent }">
       <!-- Main headline -->
       <div class="hero-center">
-        <span class="company-tag">
+        <!-- <span class="company-tag">
           <span class="tag-dot"></span>
-          Consultoria de TI
-        </span>
+          Consultoria
+        </span> -->
 
-        <h1 class="name">
-          Cognitiva<span class="highlight">Tech</span>
+        <h1 class="hero-title">
+          Planilha, WhatsApp e e-mail ainda <span class="highlight">controlam</span> seu negócio?
         </h1>
 
-        <p class="tagline">Transformamos tecnologia em resultado para o seu negócio</p>
-
         <p class="description">
-          Consultoria especializada em <strong>Cloud</strong>, <strong>Microsserviços</strong>,
-          <strong>Integrações</strong> e <strong>Inteligência Artificial</strong> — para que você
-          foque no crescimento enquanto a tecnologia trabalha por você.
+          Desenvolvemos sistemas sob medida para pequenas empresas que querem organizar a operação, reduzir retrabalho e crescer — sem depender de gambiarras digitais.
         </p>
 
         <div class="cta-group">
@@ -41,10 +37,14 @@ onMounted(() => {
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
               <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.843L.057 23.428a.75.75 0 0 0 .916.916l5.585-1.453A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.516-5.188-1.415l-.372-.22-3.862 1.005 1.006-3.862-.22-.372A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
             </svg>
-            Falar com um especialista
+            Quero um diagnóstico gratuito →
           </a>
-          <a href="#services" class="btn btn-secondary">Nossos serviços</a>
+          <a href="#how-it-works" class="btn btn-secondary">Ver como funciona →</a>
         </div>
+
+        <p class="microcopy">
+          Diagnóstico de 30 min &middot; Sem compromisso &middot; Respondemos em até 1 dia útil
+        </p>
 
       </div>
     </div>
@@ -152,14 +152,17 @@ onMounted(() => {
   50% { opacity: 0.5; transform: scale(0.8); }
 }
 
-/* Name */
-.name {
-  font-size: clamp(3.5rem, 8vw, 6rem);
+/* Title */
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.1;
   margin-bottom: var(--spacing-md);
   color: #fff;
   letter-spacing: -0.02em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .highlight {
@@ -167,15 +170,6 @@ onMounted(() => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-/* Tagline */
-.tagline {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--text-primary);
-  font-weight: 600;
-  margin-bottom: var(--spacing-md);
-  line-height: 1.4;
 }
 
 /* Description */
@@ -197,8 +191,16 @@ onMounted(() => {
   display: flex;
   gap: var(--spacing-md);
   justify-content: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm); /* Reduced margin to accommodate microcopy */
   flex-wrap: wrap;
+}
+
+/* Microcopy */
+.microcopy {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  margin-bottom: var(--spacing-xl);
 }
 
 .btn {
@@ -388,8 +390,8 @@ onMounted(() => {
     justify-content: center;
   }
 
-  .name {
-    font-size: 3rem;
+  .hero-title {
+    font-size: 2.5rem;
   }
 
   .cta-group {
