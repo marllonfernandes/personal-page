@@ -14,6 +14,7 @@ const currentYear = new Date().getFullYear();
             <span>•</span>
             <a href="tel:+5511966464979">(11) 96646-4979</a>
           </div>
+          <p class="remote-footer-text">Atendimento 100% remoto — atendemos empresas em todo o Brasil 📍.</p>
         </div>
       </div>
 
@@ -84,6 +85,14 @@ const currentYear = new Date().getFullYear();
 
 .contact-info a:hover {
   color: var(--accent-primary);
+}
+
+.remote-footer-text {
+  font-size: 0.85rem !important;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  margin-top: 0.75rem !important;
+  margin-bottom: 0 !important;
 }
 
 .footer-links {

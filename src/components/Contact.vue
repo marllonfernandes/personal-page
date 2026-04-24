@@ -166,6 +166,13 @@ const submitForm = async () => {
             (11) 96646-4979
           </a>
         </div>
+        
+        <p class="remote-notice">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+          </svg>
+          Atendemos remotamente em todo o Brasil. Sem necessidade de reunião presencial.
+        </p>
       </div>
     </div>
   </section>
@@ -453,6 +460,24 @@ const submitForm = async () => {
 .separator {
   color: var(--text-secondary);
   opacity: 0.4;
+}
+
+.remote-notice {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
