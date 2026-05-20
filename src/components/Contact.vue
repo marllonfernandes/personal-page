@@ -4,7 +4,9 @@ import { ref, computed, watch } from 'vue';
 const form = ref({
   name: '',
   email: '',
-  phone: ''
+  phone: '',
+  segment: '',
+  challenge: ''
 });
 
 const isSubmitting = ref(false);
@@ -67,7 +69,7 @@ const submitForm = async () => {
     }
     
     submitSuccess.value = true;
-    form.value = { name: '', email: '', phone: '' };
+    form.value = { name: '', email: '', phone: '', segment: '', challenge: '' };
     
     setTimeout(() => {
       submitSuccess.value = false;
@@ -112,6 +114,32 @@ const submitForm = async () => {
           <div class="form-group">
             <input type="tel" id="phone" v-model="form.phone" required placeholder="Seu WhatsApp (com DDD)" class="form-input" :class="{ 'input-invalid': form.phone && !isPhoneValid }">
             <span v-if="form.phone && !isPhoneValid" class="field-error">Telefone inválido</span>
+          </div>
+          <div class="form-group">
+            <select id="segment" v-model="form.segment" class="form-input form-select">
+              <option value="" disabled>Qual é o seu segmento? (opcional)</option>
+              <option value="juridico">Escritório Jurídico / Advocacia</option>
+              <option value="clinica_medica">Clínica Médica / Odontológica</option>
+              <option value="clinica_vet">Clínica Veterinária</option>
+              <option value="oficina">Oficina Mecânica / Prestador de Serviço</option>
+              <option value="contabilidade">Contabilidade / Financeiro</option>
+              <option value="imobiliaria">Imobiliária / Corretora</option>
+              <option value="pme">Pequena ou Média Empresa</option>
+              <option value="ecommerce">E-commerce / Varejo</option>
+              <option value="agencia">Agência Digital / Marketing</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select id="challenge" v-model="form.challenge" class="form-input form-select">
+              <option value="" disabled>Qual é seu maior desafio? (opcional)</option>
+              <option value="planilhas">Controlo tudo em planilhas</option>
+              <option value="site">Preciso de um site profissional</option>
+              <option value="automacao">Quero automatizar processos</option>
+              <option value="integracao">Meus sistemas não se integram</option>
+              <option value="sistema">Preciso de um sistema personalizado</option>
+              <option value="outro">Outro</option>
+            </select>
           </div>
           <div class="form-actions">
             <button type="submit" class="btn btn-submit" :disabled="isSubmitting || !isFormValid">
@@ -311,6 +339,20 @@ const submitForm = async () => {
 
 .form-input::placeholder {
   color: rgba(255, 255, 255, 0.4);
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.1rem center;
+  cursor: pointer;
+}
+
+.form-select option {
+  background: #1a1a2e;
+  color: #fff;
 }
 
 .btn-submit {

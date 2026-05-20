@@ -1,8 +1,10 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
-import Expertise from './components/Expertise.vue'
+import NichesSection from './components/NichesSection.vue'
+import SocialProof from './components/SocialProof.vue'
 import Services from './components/Services.vue'
+import Expertise from './components/Expertise.vue'
 import HowItWorks from './components/HowItWorks.vue'
 import Contact from './components/Contact.vue'
 import WhatsAppButton from './components/WhatsAppButton.vue'
@@ -14,8 +16,10 @@ import FooterSection from './components/FooterSection.vue'
     <Navbar />
     <main>
       <Hero />
-      <Expertise />
+      <NichesSection />
+      <SocialProof />
       <Services />
+      <Expertise />
       <HowItWorks />
       <Contact />
     </main>

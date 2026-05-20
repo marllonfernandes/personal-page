@@ -53,6 +53,10 @@
       <!-- Bottom CTA Box -->
       <div class="cta-box">
         <div class="cta-content">
+          <div class="cta-scarcity">
+            <span class="scarcity-dot"></span>
+            Vagas abertas para novos clientes em maio
+          </div>
           <h3 class="cta-title">Agende um diagnóstico gratuito</h3>
           <p class="cta-desc">30 minutos. Sem compromisso. A gente analisa seu caso e indica o melhor caminho.</p>
         </div>
@@ -173,6 +177,34 @@
 
 .cta-content {
   flex: 1;
+}
+
+.cta-scarcity {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 0.75rem;
+}
+
+.scarcity-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  animation: pulse-green 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
 }
 
 .cta-title {
