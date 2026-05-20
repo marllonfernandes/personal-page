@@ -33,6 +33,8 @@ const leadSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true },
   phone: { type: String, required: true },
+  segment: { type: String },
+  challenge: { type: String },
   createdAt: { type: Date, default: Date.now }
 });
 
@@ -41,13 +43,13 @@ const Lead = mongoose.model('Lead', leadSchema);
 // API Route
 app.post('/api/leads', async (req, res) => {
   try {
-    const { name, email, phone } = req.body;
+    const { name, email, phone, segment, challenge } = req.body;
     
     if (!name || !email || !phone) {
-      return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
+      return res.status(400).json({ error: 'Todos os campos obrigatórios devem ser preenchidos' });
     }
 
-    const newLead = new Lead({ name, email, phone });
+    const newLead = new Lead({ name, email, phone, segment, challenge });
     await newLead.save();
 
     res.status(201).json({ message: 'Lead salvo com sucesso!' });
