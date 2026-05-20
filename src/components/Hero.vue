@@ -28,8 +28,17 @@ onMounted(() => {
         </h1>
 
         <p class="description">
-          Desenvolvemos sistemas sob medida para pequenas empresas que querem organizar a operação, reduzir retrabalho e crescer — sem depender de gambiarras digitais.
+          Desenvolvemos sistemas sob medida e <strong>agentes de IA</strong> para pequenas empresas que querem automatizar a operação, reduzir retrabalho e crescer — sem depender de gambiarras digitais.
         </p>
+
+        <div class="niche-chips">
+          <span class="niche-chip">Jurídico</span>
+          <span class="niche-chip">Clínicas</span>
+          <span class="niche-chip">Contabilidades</span>
+          <span class="niche-chip">Imobiliárias</span>
+          <span class="niche-chip">PMEs</span>
+          <span class="niche-chip">E-commerce</span>
+        </div>
 
         <div class="cta-group">
           <a href="https://wa.me/5511966464979" target="_blank" rel="noopener" class="btn btn-primary">
@@ -193,6 +202,44 @@ onMounted(() => {
   justify-content: center;
   margin-bottom: var(--spacing-sm); /* Reduced margin to accommodate microcopy */
   flex-wrap: wrap;
+}
+
+/* Niche chips */
+.niche-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.niche-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.85rem;
+  border-radius: 100px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.niche-chip::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.niche-chip:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  color: var(--text-primary);
 }
 
 /* Microcopy */
