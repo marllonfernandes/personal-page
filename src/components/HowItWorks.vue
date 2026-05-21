@@ -60,7 +60,7 @@
           <h3 class="cta-title">Agende um diagnóstico gratuito</h3>
           <p class="cta-desc">30 minutos. Sem compromisso. A gente analisa seu caso e indica o melhor caminho.</p>
         </div>
-        <a href="https://wa.me/5511966464979" target="_blank" rel="noopener" class="cta-btn">
+        <a href="https://wa.me/5511997120037" target="_blank" rel="noopener" class="cta-btn">
           Falar no WhatsApp
         </a>
       </div>

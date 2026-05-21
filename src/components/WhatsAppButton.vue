@@ -1,6 +1,7 @@
 <script setup>
-const whatsappNumber = '5511966464979';
-const message = 'Olá Marllon! Acessei sua página pessoal e gostaria de conversar sobre um projeto.';
+const whatsappNumber = '5511997120037';
+const message =
+  'Olá, seja bem-vindo à CognitivaTech! Estamos prontos para transformar sua ideia em solução. Como podemos colaborar com o seu projeto?';
 const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 </script>
 
