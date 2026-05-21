@@ -12,7 +12,7 @@ const currentYear = new Date().getFullYear();
           <div class="contact-info">
             <a href="mailto:cognitivatech4@gmail.com">cognitivatech4@gmail.com</a>
             <span>•</span>
-            <a href="tel:+5511966464979">(11) 96646-4979</a>
+            <a href="tel:+5511997120037">(11) 96646-4979</a>
           </div>
           <p class="remote-footer-text">Atendimento 100% remoto — atendemos empresas em todo o Brasil 📍.</p>
         </div>

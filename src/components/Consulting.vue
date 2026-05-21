@@ -108,7 +108,7 @@ function toggle(id) {
               </li>
             </ul>
 
-            <a href="https://wa.me/5511966464979" target="_blank" rel="noopener" class="cta-btn" @click.stop>
+            <a href="https://wa.me/5511997120037" target="_blank" rel="noopener" class="cta-btn" @click.stop>
               Falar com especialista
             </a>
           </div>
