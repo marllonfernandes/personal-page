@@ -166,7 +166,7 @@ onUnmounted(() => {
           Estamos iniciando os primeiros projetos da consultoria. Seja um dos primeiros clientes e
           tenha atenção dedicada e acompanhamento próximo para garantir resultados excepcionais.
         </p>
-        <a href="https://wa.me/5511966464979" target="_blank" rel="noopener" class="testimonial-cta">
+        <a href="https://wa.me/5511997120037" target="_blank" rel="noopener" class="testimonial-cta">
           Seja um dos primeiros — fale agora
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
