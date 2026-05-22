@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import SvgIcon from './SvgIcon.vue'
 
 const activeCard = ref(null)
 
@@ -79,7 +80,7 @@ function toggle(id) {
           <div v-if="plan.highlight" class="popular-ribbon">{{ plan.badge }}</div>
 
           <div class="plan-top">
-            <div class="plan-icon" v-html="plan.icon"></div>
+            <SvgIcon :svg="plan.icon" class="plan-icon" />
             <span v-if="!plan.highlight" class="plan-badge">{{ plan.badge }}</span>
 
             <div class="plan-info">

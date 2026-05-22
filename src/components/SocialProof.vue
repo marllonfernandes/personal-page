@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import SvgIcon from './SvgIcon.vue'
 
 const metrics = [
   {
@@ -140,7 +141,7 @@ onUnmounted(() => {
         <h3 class="achievements-title">Resultados comprovados na prática</h3>
         <div class="achievements-grid">
           <div v-for="(item, index) in achievements" :key="index" class="achievement-item">
-            <span class="achievement-icon" v-html="item.icon"></span>
+            <SvgIcon :svg="item.icon" class="achievement-icon" />
             <span class="achievement-text">{{ item.text }}</span>
           </div>
         </div>

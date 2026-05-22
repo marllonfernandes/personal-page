@@ -1,4 +1,5 @@
 <script setup>
+import SvgIcon from './SvgIcon.vue'
 const niches = [
   {
     id: 'juridico',
@@ -70,7 +71,7 @@ const niches = [
           class="niche-card"
         >
           <span v-if="niche.tag" class="hot-tag">{{ niche.tag }}</span>
-          <div class="niche-icon" v-html="niche.icon"></div>
+          <SvgIcon :svg="niche.icon" class="niche-icon" />
           <h3 class="niche-title">{{ niche.title }}</h3>
           <p class="niche-desc">{{ niche.description }}</p>
         </div>

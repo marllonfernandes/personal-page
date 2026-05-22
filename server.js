@@ -38,6 +38,26 @@ app.use((req, res, next) => {
   // Strict-Transport-Security is already set by Cloud Run / Google LB,
   // but we reinforce it here for defense-in-depth.
   res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  // Content Security Policy — restringe de onde scripts, estilos e recursos
+  // podem ser carregados. Reduz o impacto de qualquer XSS no frontend Vue.
+  // 'unsafe-inline' em script-src é necessário para o Google Tag Manager
+  // (GTM injeta scripts inline). Remova-o se migrar o GTM para nonces.
+  res.setHeader(
+    'Content-Security-Policy',
+    [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net https://www.google.com",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net",
+      "img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com",
+      "style-src 'self' 'unsafe-inline'",
+      "font-src 'self' data:",
+      "frame-src https://www.googletagmanager.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+      "upgrade-insecure-requests",
+    ].join('; ')
+  );
   // Remove fingerprinting header added by Express.
   res.removeHeader('X-Powered-By');
   next();
