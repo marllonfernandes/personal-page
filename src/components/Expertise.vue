@@ -1,4 +1,5 @@
 <script setup>
+import SvgIcon from './SvgIcon.vue'
 const expertise = [
   {
     title: 'Construir Aplicações Sólidas',
@@ -52,7 +53,7 @@ const expertise = [
           :style="{ animationDelay: `${index * 0.1}s` }"
         >
           <div class="card-accent"></div>
-          <div class="expertise-icon" v-html="item.icon"></div>
+          <SvgIcon :svg="item.icon" class="expertise-icon" />
           <div class="expertise-content">
             <h3 class="expertise-title">{{ item.title }}</h3>
             <p class="expertise-description">{{ item.description }}</p>
