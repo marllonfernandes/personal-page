@@ -153,24 +153,25 @@ onUnmounted(() => {
 }
 
 .nav-links a.active {
-  color: var(--accent-primary);
+  color: #38bdf8;
   font-weight: 700;
 }
 
 .btn-nav {
-  background: rgba(124, 58, 237, 0.1);
-  color: var(--accent-primary) !important;
-  border: 1px solid rgba(124, 58, 237, 0.3);
+  font-family: var(--font-display);
+  background: rgba(37, 99, 235, 0.12);
+  color: #38bdf8 !important;
+  border: 1px solid rgba(37, 99, 235, 0.3);
   padding: 0.5rem 1.25rem;
   border-radius: 100px;
   font-weight: 600 !important;
-  transition: all 0.2s ease !important;
+  transition: all var(--transition-fast) !important;
 }
 
 .btn-nav:hover {
-  background: rgba(124, 58, 237, 0.2);
-  border-color: rgba(124, 58, 237, 0.5);
-  color: #fff !important;
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #ffffff !important;
   transform: translateY(-2px);
 }
 
