@@ -40,7 +40,7 @@ onMounted(() => {
   }, options);
 
   // Observe all sections we care about
-  const sections = ['home', 'segments', 'services', 'how-it-works', 'contact'];
+  const sections = ['home', 'segments', 'services', 'how-it-works', 'faq', 'contact'];
   setTimeout(() => {
     sections.forEach(id => {
       const el = document.getElementById(id);
@@ -69,6 +69,7 @@ onUnmounted(() => {
         <li><a href="#segments" :class="{ active: activeSection === 'segments' }">Segmentos</a></li>
         <li><a href="#services" :class="{ active: activeSection === 'services' }">Serviços</a></li>
         <li><a href="#how-it-works" :class="{ active: activeSection === 'how-it-works' }">Como Funciona</a></li>
+        <li><a href="#faq" :class="{ active: activeSection === 'faq' }">Dúvidas</a></li>
         <li><a href="#contact" class="btn-nav" :class="{ active: activeSection === 'contact' }">Contato</a></li>
       </ul>
 
@@ -87,6 +88,7 @@ onUnmounted(() => {
         <li><a href="#segments" @click="closeMenu" :class="{ active: activeSection === 'segments' }">Segmentos</a></li>
         <li><a href="#services" @click="closeMenu" :class="{ active: activeSection === 'services' }">Serviços</a></li>
         <li><a href="#how-it-works" @click="closeMenu" :class="{ active: activeSection === 'how-it-works' }">Como Funciona</a></li>
+        <li><a href="#faq" @click="closeMenu" :class="{ active: activeSection === 'faq' }">Dúvidas</a></li>
         <li><a href="#contact" class="btn-nav" @click="closeMenu" :class="{ active: activeSection === 'contact' }">Contato</a></li>
       </ul>
     </div>

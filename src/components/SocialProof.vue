@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import SvgIcon from './SvgIcon.vue'
+import { trackConversion } from '../utils/analytics'
 
 const metrics = [
   {
@@ -153,7 +154,13 @@ onUnmounted(() => {
           </div>
         </div>
         <div class="trust-cta-row">
-          <a href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+agendar+um+diagn%C3%B3stico+técnico+direto+com+o+especialista." target="_blank" rel="noopener" class="trust-cta-btn">
+          <a 
+            href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+agendar+um+diagn%C3%B3stico+técnico+direto+com+o+especialista." 
+            target="_blank" 
+            rel="noopener" 
+            class="trust-cta-btn"
+            @click="trackConversion('whatsapp_click', 'social_proof_trust')"
+          >
             Agendar diagnóstico técnico direto &rarr;
           </a>
         </div>

@@ -1,5 +1,6 @@
 <script setup>
 import SvgIcon from './SvgIcon.vue'
+import { trackConversion } from '../utils/analytics'
 
 const featuredNiches = [
   {
@@ -136,7 +137,13 @@ const bannerNiche = {
               <p class="bento-desc">{{ bannerNiche.description }}</p>
             </div>
           </div>
-          <a href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+solu%C3%A7%C3%B5es+para+meu+E-commerce+ou+Varejo." target="_blank" rel="noopener" class="banner-cta">
+          <a 
+            href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+solu%C3%A7%C3%B5es+para+meu+E-commerce+ou+Varejo." 
+            target="_blank" 
+            rel="noopener" 
+            class="banner-cta"
+            @click="trackConversion('whatsapp_click', 'bento_ecommerce')"
+          >
             Consultar especialista &rarr;
           </a>
         </div>
