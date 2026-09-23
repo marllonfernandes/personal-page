@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
-import { trackConversion } from '../utils/analytics';
+import { trackConversion, getAttributionParams } from '../utils/analytics';
 
 defineEmits(['open-privacy']);
 
@@ -59,12 +59,19 @@ const submitForm = async () => {
   submitError.value = '';
   
   try {
+    const attribution = getAttributionParams();
+    const payload = {
+      ...form.value,
+      ...attribution,
+      submitted_at: new Date().toISOString()
+    };
+
     const response = await fetch('/api/leads', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(form.value)
+      body: JSON.stringify(payload)
     });
     
     if (!response.ok) {
@@ -73,8 +80,10 @@ const submitForm = async () => {
     
     submitSuccess.value = true;
 
-    // Disparo de evento de conversão para Google Ads & GTM via utilitário
-    trackConversion('form_submit', form.value.segment || 'geral');
+    // Disparo de evento de conversão para Google Ads & GTM com contexto enriquecido
+    trackConversion('form_submit', form.value.segment || 'geral', {
+      challenge: form.value.challenge || 'nao_informado'
+    });
 
     form.value = { name: '', email: '', phone: '', segment: '', challenge: '' };
     
@@ -214,7 +223,7 @@ const submitForm = async () => {
         </div>
 
         <div class="contact-info">
-          <a href="mailto:cognitivatech4@gmail.com" class="info-link">
+          <a href="mailto:cognitivatech4@gmail.com" class="info-link" @click="trackConversion('email_click', 'contact')">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -222,7 +231,7 @@ const submitForm = async () => {
             cognitivatech4@gmail.com
           </a>
           <span class="separator">&middot;</span>
-          <a href="tel:+5511966464979" class="info-link">
+          <a href="tel:+5511966464979" class="info-link" @click="trackConversion('phone_click', 'contact')">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
