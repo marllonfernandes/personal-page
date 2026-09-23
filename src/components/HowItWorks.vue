@@ -1,4 +1,5 @@
 <script setup>
+import { trackConversion } from '../utils/analytics'
 const steps = [
   {
     number: '01',
@@ -75,7 +76,13 @@ const steps = [
           <h3 class="cta-title">Agende um diagnóstico gratuito com o especialista</h3>
           <p class="cta-desc">30 minutos. Sem compromisso. Avaliamos a viabilidade da sua automação e indicamos o melhor caminho.</p>
         </div>
-        <a href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+agendar+um+diagn%C3%B3stico+gratuito+de+30+minutos." target="_blank" rel="noopener" class="cta-btn">
+        <a 
+          href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+agendar+um+diagn%C3%B3stico+gratuito+de+30+minutos." 
+          target="_blank" 
+          rel="noopener" 
+          class="cta-btn"
+          @click="trackConversion('whatsapp_click', 'how_it_works')"
+        >
           Falar no WhatsApp &rarr;
         </a>
       </div>

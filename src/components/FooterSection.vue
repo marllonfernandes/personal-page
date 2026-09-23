@@ -39,6 +39,7 @@ const currentYear = new Date().getFullYear();
             <a href="#segments">Segmentos</a>
             <a href="#social-proof">Resultados</a>
             <a href="#services">Serviços</a>
+            <a href="#faq">Perguntas Frequentes</a>
             <a href="#contact">Diagnóstico</a>
           </div>
           <div class="nav-column">

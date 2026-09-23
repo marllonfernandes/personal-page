@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
+import { trackConversion } from '../utils/analytics';
 
 defineEmits(['open-privacy']);
 
@@ -72,22 +73,8 @@ const submitForm = async () => {
     
     submitSuccess.value = true;
 
-    // Disparo de evento de conversão para Google Ads & GTM
-    if (typeof window !== 'undefined') {
-      if (window.gtag) {
-        window.gtag('event', 'generate_lead', {
-          event_category: 'form',
-          event_label: form.value.segment || 'geral'
-        });
-      }
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'lead_form_submitted',
-          leadSegment: form.value.segment,
-          leadChallenge: form.value.challenge
-        });
-      }
-    }
+    // Disparo de evento de conversão para Google Ads & GTM via utilitário
+    trackConversion('form_submit', form.value.segment || 'geral');
 
     form.value = { name: '', email: '', phone: '', segment: '', challenge: '' };
     
@@ -117,6 +104,29 @@ const submitForm = async () => {
         <p class="contact-text">
           Seja para entender como a automação com IA pode transformar sua operação ou para desenvolver uma solução sob medida — nossa equipe técnica está disponível para uma conversa sem compromisso.
         </p>
+
+        <!-- WhatsApp Direct Hero Action -->
+        <div class="whatsapp-direct-card">
+          <div class="direct-left">
+            <span class="direct-status">
+              <span class="pulse-green-dot"></span>
+              Atendimento Imediato
+            </span>
+            <div class="direct-headline">Prefere conversar sem preencher formulário?</div>
+            <p class="direct-sub">Tire suas dúvidas técnicas ou solicite seu diagnóstico diretamente com o especialista no WhatsApp.</p>
+          </div>
+          <a href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Vim+pelo+site+da+CognitivaTech+e+gostaria+de+falar+sobre+um+projeto." target="_blank" rel="noopener" class="btn btn-direct-wa" @click="trackConversion('whatsapp_click', 'contact_direct_card')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.843L.057 23.428a.75.75 0 0 0 .916.916l5.585-1.453A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.516-5.188-1.415l-.372-.22-3.862 1.005 1.006-3.862-.22-.372A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+            Chamar no WhatsApp agora &rarr;
+          </a>
+        </div>
+
+        <div class="form-or-divider">
+          <span>ou envie os detalhes pelo formulário</span>
+        </div>
 
         <form class="lead-form" @submit.prevent="submitForm" v-if="!submitSuccess">
           <div class="form-group">
@@ -163,7 +173,7 @@ const submitForm = async () => {
               <span v-if="isSubmitting">Enviando solicitação...</span>
               <span v-else>Solicitar Diagnóstico Gratuito &rarr;</span>
             </button>
-            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consultoria+CognitivaTech&details=Reuni%C3%A3o+de+diagn%C3%B3stico+com+a+CognitivaTech.&add=cognitivatech4@gmail.com" target="_blank" rel="noopener" class="btn btn-calendar">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Consultoria+CognitivaTech&details=Reuni%C3%A3o+de+diagn%C3%B3stico+com+a+CognitivaTech.&add=cognitivatech4@gmail.com" target="_blank" rel="noopener" class="btn btn-calendar" @click="trackConversion('calendar_click', 'google_calendar')">
               <img src="/google_calendar.png" alt="Google Calendar" width="18" height="18" />
               Agendar direto no Google Calendar
             </a>
@@ -174,7 +184,7 @@ const submitForm = async () => {
               <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
               <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
             </svg>
-            <span>Seus dados estão protegidos pela LGPD. Não enviamos spam. 
+            <span>Dados protegidos pela LGPD. Garantia de sigilo com termo de confidencialidade (NDA) sob demanda. 
               <button type="button" class="privacy-link-btn" @click="$emit('open-privacy')">Ver Política de Privacidade</button>
             </span>
           </p>
@@ -194,7 +204,7 @@ const submitForm = async () => {
         <div class="contact-divider">ou converse diretamente</div>
 
         <div class="contact-actions">
-          <a href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Vim+pelo+site+da+CognitivaTech+e+gostaria+de+falar+sobre+um+projeto." target="_blank" rel="noopener" class="btn btn-whatsapp">
+          <a href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Vim+pelo+site+da+CognitivaTech+e+gostaria+de+falar+sobre+um+projeto." target="_blank" rel="noopener" class="btn btn-whatsapp" @click="trackConversion('whatsapp_click', 'contact_secondary')">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
               <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.549 4.107 1.51 5.843L.057 23.428a.75.75 0 0 0 .916.916l5.585-1.453A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.516-5.188-1.415l-.372-.22-3.862 1.005 1.006-3.862-.22-.372A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
@@ -290,6 +300,125 @@ const submitForm = async () => {
   max-width: 580px;
   margin: 0 auto 2.25rem;
 }
+
+/* WhatsApp Direct Action Card */
+.whatsapp-direct-card {
+  max-width: 580px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, rgba(16, 21, 34, 0.95) 100%);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-normal);
+}
+
+.whatsapp-direct-card:hover {
+  border-color: rgba(37, 211, 102, 0.5);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.15);
+  transform: translateY(-2px);
+}
+
+.direct-left {
+  flex: 1;
+}
+
+.direct-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #4ade80;
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.pulse-green-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade80;
+  animation: pulse-green 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.direct-headline {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.direct-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.btn-direct-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  background: #25d366;
+  color: #052e16;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 0.6rem;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+}
+
+.btn-direct-wa:hover {
+  background: #22c55e;
+  color: #022c14;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+.form-or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 auto 1.75rem;
+  max-width: 480px;
+}
+
+.form-or-divider::before,
+.form-or-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.form-or-divider::before { margin-right: 1rem; }
+.form-or-divider::after { margin-left: 1rem; }
 
 /* Form Styles */
 .lead-form {
@@ -563,6 +692,17 @@ const submitForm = async () => {
 @media (max-width: 768px) {
   .contact-card {
     padding: 2.5rem 1.25rem;
+  }
+
+  .whatsapp-direct-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+  }
+
+  .btn-direct-wa {
+    width: 100%;
+    justify-content: center;
   }
 
   .btn-whatsapp {

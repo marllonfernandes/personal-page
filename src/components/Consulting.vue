@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import SvgIcon from './SvgIcon.vue'
+import { trackConversion } from '../utils/analytics'
 
 const activeCard = ref(null)
 
@@ -109,7 +110,7 @@ function toggle(id) {
               </li>
             </ul>
 
-            <a href="https://wa.me/5511966464979" target="_blank" rel="noopener" class="cta-btn" @click.stop>
+            <a :href="`https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+conversar+sobre+o+plano+de+${encodeURIComponent(plan.title)}.`" target="_blank" rel="noopener" class="cta-btn" @click.stop="trackConversion('whatsapp_click', 'consulting_' + plan.id)">
               Falar com especialista
             </a>
           </div>
