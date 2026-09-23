@@ -176,8 +176,8 @@ function toggle(id) {
                 {{ item }}
               </li>
             </ul>
-            <a href="https://wa.me/5511997120037" target="_blank" rel="noopener" class="cta-btn" @click.stop>
-              Falar com especialista
+            <a :href="`https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+conversar+sobre+o+servi%C3%A7o+de+${encodeURIComponent(service.title)}.`" target="_blank" rel="noopener" class="cta-btn" @click.stop>
+              Solicitar proposta para {{ service.title }} &rarr;
             </a>
           </div>
         </div>
@@ -200,16 +200,17 @@ function toggle(id) {
 
 .section-tag {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-primary);
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  padding: 0.3rem 1rem;
+  color: #38bdf8;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  padding: 0.35rem 1rem;
   border-radius: 100px;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 .section-subtitle {
@@ -231,25 +232,23 @@ function toggle(id) {
 /* Card */
 .plan-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(124, 58, 237, 0.4);
-  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.2), 0 12px 40px rgba(124, 58, 237, 0.1);
-  background: rgba(124, 58, 237, 0.04);
-  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.85rem;
   overflow: hidden;
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: all var(--transition-normal);
 }
 
 .plan-card:hover {
-  border-color: rgba(124, 58, 237, 0.6);
-  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.18);
+  border-color: var(--border-accent);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
   transform: translateY(-4px);
 }
 
 .plan-card.is-open {
-  border-color: rgba(124, 58, 237, 0.65);
-  box-shadow: 0 12px 50px rgba(124, 58, 237, 0.2);
+  border-color: var(--border-accent);
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.15);
 }
 
 /* Ribbon */
@@ -281,10 +280,10 @@ function toggle(id) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  border-radius: 12px;
-  color: var(--accent-primary);
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: 0.6rem;
+  color: #38bdf8;
 }
 
 .plan-info {
@@ -293,6 +292,7 @@ function toggle(id) {
 }
 
 .plan-title {
+  font-family: var(--font-display);
   font-size: 1.05rem;
   font-weight: 700;
   color: #fff;
@@ -315,7 +315,7 @@ function toggle(id) {
 
 .plan-card.is-open .chevron {
   transform: rotate(180deg);
-  color: var(--accent-primary);
+  color: #38bdf8;
 }
 
 /* Details */
@@ -357,29 +357,31 @@ function toggle(id) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(124, 58, 237, 0.15);
+  background: rgba(37, 99, 235, 0.15);
   border-radius: 50%;
-  color: var(--accent-primary);
+  color: #38bdf8;
   margin-top: 1px;
 }
 
 .cta-btn {
   display: block;
   text-align: center;
-  background: var(--gradient-text);
+  background: var(--accent-primary);
   color: #fff;
+  font-family: var(--font-display);
   font-size: 0.9rem;
   font-weight: 600;
-  padding: 0.7rem 1.5rem;
-  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   margin-top: var(--spacing-md);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
 .cta-btn:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.45);
   color: #fff;
 }
 
