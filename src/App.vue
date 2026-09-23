@@ -7,6 +7,7 @@ import SocialProof from './components/SocialProof.vue'
 import Services from './components/Services.vue'
 import Expertise from './components/Expertise.vue'
 import HowItWorks from './components/HowItWorks.vue'
+import FAQSection from './components/FAQSection.vue'
 import Contact from './components/Contact.vue'
 import WhatsAppButton from './components/WhatsAppButton.vue'
 import FooterSection from './components/FooterSection.vue'
@@ -35,6 +36,7 @@ const closeModal = () => {
       <Services />
       <Expertise />
       <HowItWorks />
+      <FAQSection />
       <Contact @open-privacy="openModal('privacy')" />
     </main>
     <FooterSection 
