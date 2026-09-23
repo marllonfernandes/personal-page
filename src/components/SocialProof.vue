@@ -6,29 +6,29 @@ const metrics = [
   {
     value: 18,
     suffix: '+',
-    label: 'Anos de Experiência',
-    description: 'em desenvolvimento e arquitetura de software',
+    label: 'Anos de Bagagem Técnica',
+    description: 'em desenvolvimento, cloud e arquitetura de sistemas',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`
   },
   {
     value: 30,
     suffix: '+',
     label: 'Projetos Entregues',
-    description: 'sistemas em produção com alto volume e criticidade',
+    description: 'sistemas em produção com estabilidade e alto volume',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`
   },
   {
     value: 40,
     suffix: '%',
-    label: 'Redução de Custo',
-    description: 'em infraestrutura com migrações para cloud bem executadas',
+    label: 'Redução Média de Custo',
+    description: 'em infraestrutura com modernização para cloud e IA',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`
   },
   {
     value: 15,
     suffix: '+',
-    label: 'Tecnologias',
-    description: 'em Cloud, IA, backend, frontend e DevOps dominadas',
+    label: 'Tecnologias Dominadas',
+    description: 'em Cloud, Agentes de IA, Microsserviços e DevOps',
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`
   }
 ]
@@ -36,27 +36,27 @@ const metrics = [
 const achievements = [
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>`,
-    text: 'Migração On-Premise → GCP com zero downtime e 40% de redução de custo'
+    text: 'Migração On-Premise → GCP com zero downtime e 40% de redução de custos'
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
-    text: 'Arquitetura de microsserviços suportando 500k+ requisições/dia'
+    text: 'Arquitetura de microsserviços escalável suportando 500k+ requisições/dia'
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
-    text: 'Pipeline CI/CD reduzindo tempo de deploy de 2h para menos de 10 minutos'
+    text: 'Pipelines CI/CD reduzindo tempo de deploy de 2h para menos de 10 minutos'
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
-    text: 'Agentes de IA integrados em sistemas legados, automatizando processos críticos'
+    text: 'Agentes de IA e automação WhatsApp integrados a bancos de dados e ERPs legados'
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    text: 'Liderança técnica de times multidisciplinares em projetos de grande escala'
+    text: 'Engenharia e consultoria direta, sem camadas de gerência intermediária ou jargões'
   },
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
-    text: 'Modernização de sistemas monolíticos legados sem interrupção da operação'
+    text: 'Modernização de rotinas operacionais sem paralisar o atendimento aos seus clientes'
   }
 ]
 
@@ -64,14 +64,13 @@ const achievements = [
 const counters = ref(metrics.map(() => 0))
 let animationFrames = []
 
-function animateCounter(index, target, duration = 1800) {
+function animateCounter(index, target, duration = 1600) {
   const startTime = performance.now()
   const start = 0
 
   function update(currentTime) {
     const elapsed = currentTime - startTime
     const progress = Math.min(elapsed / duration, 1)
-    // Ease out cubic
     const eased = 1 - Math.pow(1 - progress, 3)
     counters.value[index] = Math.round(start + (target - start) * eased)
     if (progress < 1) {
@@ -95,7 +94,7 @@ onMounted(() => {
         observer.disconnect()
       }
     },
-    { threshold: 0.3 }
+    { threshold: 0.25 }
   )
   observer.observe(section)
 })
@@ -108,24 +107,19 @@ onUnmounted(() => {
 
 <template>
   <section class="social-proof-section" id="social-proof">
-    <!-- Background decoration -->
-    <div class="bg-blob blob-left"></div>
-    <div class="bg-blob blob-right"></div>
-
     <div class="container">
 
       <!-- Section header -->
       <div class="section-header">
-        <span class="section-tag">Resultados & Impacto</span>
-        <h2 class="section-title">Nossa expertise em números</h2>
+        <span class="section-tag">Resultados &amp; Credibilidade</span>
+        <h2 class="section-title">Nossa autoridade técnica em números</h2>
         <p class="section-subtitle">
-          Cada número representa um projeto real, um prazo cumprido e um negócio que dependia do resultado.
-          Experiência que se acumula entrega por entrega — e agora trabalhando para o seu negócio.
+          Cada indicador representa projetos reais entregues com rigor técnico e negócios que hoje operam com muito mais agilidade e tranquilidade.
         </p>
       </div>
 
-      <!-- Metrics grid -->
-      <!-- <div class="metrics-grid">
+      <!-- Metrics grid (Reativado com precisão) -->
+      <div class="metrics-grid">
         <div v-for="(metric, index) in metrics" :key="index" class="metric-card">
           <div class="metric-icon" v-html="metric.icon"></div>
           <div class="metric-value">
@@ -134,11 +128,11 @@ onUnmounted(() => {
           <div class="metric-label">{{ metric.label }}</div>
           <div class="metric-description">{{ metric.description }}</div>
         </div>
-      </div> -->
+      </div>
 
       <!-- Achievements -->
       <div class="achievements-wrapper">
-        <h3 class="achievements-title">Resultados comprovados na prática</h3>
+        <h3 class="achievements-title">Entregas e competências consolidadas</h3>
         <div class="achievements-grid">
           <div v-for="(item, index) in achievements" :key="index" class="achievement-item">
             <SvgIcon :svg="item.icon" class="achievement-icon" />
@@ -147,30 +141,22 @@ onUnmounted(() => {
         </div>
       </div>
 
-      <!-- Anchor quote -->
-      <div class="anchor-quote">
-        <div class="quote-bar"></div>
-        <blockquote>
-          "Nossa missão é transformar desafios tecnológicos complexos em soluções que geram resultado real
-          — com a seriedade de quem sabe o que está fazendo."
-        </blockquote>
-        <!-- <p class="quote-author">— Marllon Fernandes, Fundador & Arquiteto de Soluções</p> -->
-      </div>
-
-      <!-- Future testimonials placeholder -->
-      <div class="testimonials-area">
-        <div class="testimonial-label">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          Cases de clientes em breve
+      <!-- Trust Commitment Callout -->
+      <div class="trust-callout">
+        <div class="trust-callout-header">
+          <span class="trust-icon">🛡️</span>
+          <div>
+            <h4 class="trust-title">Atendimento Direto com Engenheiro Sênior</h4>
+            <p class="trust-desc">
+              Você não é atendido por estagiários nem recebe soluções genéricas de prateleira. Seu projeto e arquitetura de IA são desenhados diretamente por quem tem certificação <strong>Google Cloud</strong> e mais de 18 anos de experiência em engenharia de sistemas.
+            </p>
+          </div>
         </div>
-        <p class="testimonial-hint">
-          Estamos iniciando os primeiros projetos da consultoria. Seja um dos primeiros clientes e
-          tenha atenção dedicada e acompanhamento próximo para garantir resultados excepcionais.
-        </p>
-        <a href="https://wa.me/5511997120037" target="_blank" rel="noopener" class="testimonial-cta">
-          Seja um dos primeiros — fale agora
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <div class="trust-cta-row">
+          <a href="https://wa.me/5511966464979?text=Ol%C3%A1%21+Gostaria+de+agendar+um+diagn%C3%B3stico+técnico+direto+com+o+especialista." target="_blank" rel="noopener" class="trust-cta-btn">
+            Agendar diagnóstico técnico direto &rarr;
+          </a>
+        </div>
       </div>
 
     </div>
@@ -181,31 +167,9 @@ onUnmounted(() => {
 .social-proof-section {
   position: relative;
   padding: var(--spacing-xl) 0;
-  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-  overflow: hidden;
-}
-
-/* Background blobs */
-.bg-blob {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  filter: blur(100px);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.blob-left {
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
-  top: -100px;
-  left: -200px;
-}
-
-.blob-right {
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.07) 0%, transparent 70%);
-  bottom: -100px;
-  right: -200px;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .container {
@@ -221,127 +185,108 @@ onUnmounted(() => {
 
 .section-tag {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-primary);
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  padding: 0.3rem 1rem;
+  color: #38bdf8;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  padding: 0.35rem 1rem;
   border-radius: 100px;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 .section-subtitle {
   font-size: 1.05rem;
   color: var(--text-secondary);
-  max-width: 620px;
+  max-width: 640px;
   margin: var(--spacing-sm) auto 0;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 /* Metrics Grid */
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-md);
+  gap: 1.25rem;
   margin-bottom: var(--spacing-xl);
 }
 
 .metric-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 20px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.85rem;
   padding: 2rem 1.5rem;
   text-align: center;
-  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
 }
 
-.metric-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.06) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: inherit;
-}
-
 .metric-card:hover {
-  border-color: rgba(124, 58, 237, 0.35);
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(124, 58, 237, 0.12);
-}
-
-.metric-card:hover::before {
-  opacity: 1;
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
 }
 
 .metric-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
-  background: rgba(124, 58, 237, 0.12);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  border-radius: 14px;
-  color: var(--accent-primary);
+  width: 48px;
+  height: 48px;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: 0.6rem;
+  color: #38bdf8;
   margin: 0 auto 1.25rem;
-  position: relative;
-  z-index: 1;
 }
 
 .metric-value {
-  font-size: 3rem;
+  font-family: var(--font-display);
+  font-size: 2.8rem;
   font-weight: 800;
+  letter-spacing: -0.03em;
   line-height: 1;
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
   margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 .metric-suffix {
   font-size: 2rem;
+  color: #38bdf8;
 }
 
 .metric-label {
+  font-family: var(--font-display);
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: #e2e8f0;
   margin-bottom: 0.4rem;
-  position: relative;
-  z-index: 1;
 }
 
 .metric-description {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-size: 0.82rem;
+  color: var(--text-muted);
   line-height: 1.5;
-  position: relative;
-  z-index: 1;
 }
 
 /* Achievements */
 .achievements-wrapper {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 24px;
-  padding: 2.5rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  padding: 2.25rem;
   margin-bottom: var(--spacing-xl);
 }
 
 .achievements-title {
+  font-family: var(--font-display);
   font-size: 1.15rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -357,112 +302,94 @@ onUnmounted(() => {
   align-items: flex-start;
   gap: 0.75rem;
   padding: 0.9rem 1rem;
-  background: rgba(124, 58, 237, 0.05);
-  border: 1px solid rgba(124, 58, 237, 0.12);
-  border-radius: 12px;
-  transition: border-color 0.2s ease, background 0.2s ease;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.6rem;
+  transition: all var(--transition-fast);
 }
 
 .achievement-item:hover {
-  background: rgba(124, 58, 237, 0.1);
-  border-color: rgba(124, 58, 237, 0.25);
+  background: rgba(37, 99, 235, 0.05);
+  border-color: var(--border-accent);
 }
 
 .achievement-icon {
   flex-shrink: 0;
-  color: var(--accent-primary);
-  margin-top: 1px;
+  color: #38bdf8;
+  margin-top: 2px;
 }
 
 .achievement-text {
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.55;
 }
 
-/* Anchor quote */
-.anchor-quote {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto var(--spacing-xl);
+/* Trust Callout */
+.trust-callout {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(14, 165, 233, 0.04) 100%);
+  border: 1px solid var(--border-accent);
+  border-radius: 1rem;
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.quote-bar {
-  width: 40px;
-  height: 3px;
-  background: var(--gradient-text);
-  border-radius: 2px;
-  margin: 0 auto 1.25rem;
+.trust-callout-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 720px;
 }
 
-blockquote {
+.trust-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.trust-title {
+  font-family: var(--font-display);
   font-size: 1.15rem;
-  color: var(--text-primary);
-  line-height: 1.75;
-  font-style: italic;
-  font-weight: 400;
-  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
 }
 
-.quote-author {
-  font-size: 0.85rem;
+.trust-desc {
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  font-weight: 500;
+  line-height: 1.6;
   margin: 0;
 }
 
-/* Testimonials placeholder */
-.testimonials-area {
-  text-align: center;
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.07) 0%, rgba(59, 130, 246, 0.06) 100%);
-  border: 1px dashed rgba(124, 58, 237, 0.3);
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
+.trust-desc strong {
+  color: #38bdf8;
 }
 
-.testimonial-label {
+.trust-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.75rem;
+  padding: 0.75rem 1.4rem;
+  background: var(--accent-primary);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  font-family: var(--font-display);
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-secondary);
-  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
 }
 
-.testimonial-hint {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  max-width: 520px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.7;
-}
-
-.testimonial-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--gradient-text);
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0.7rem 1.75rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
-}
-
-.testimonial-cta:hover {
-  opacity: 0.9;
+.trust-cta-btn:hover {
+  background: #1d4ed8;
+  color: #ffffff;
   transform: translateY(-2px);
-  color: #fff;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -471,38 +398,21 @@ blockquote {
 
 @media (max-width: 768px) {
   .metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-sm);
-  }
-
-  .metric-card {
-    padding: 1.5rem 1rem;
-  }
-
-  .metric-value {
-    font-size: 2.25rem;
+    grid-template-columns: 1fr;
   }
 
   .achievements-grid {
     grid-template-columns: 1fr;
   }
 
-  .achievements-wrapper {
-    padding: 1.75rem 1.25rem;
+  .trust-callout {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .anchor-quote {
-    padding: 1.5rem 1rem;
-  }
-
-  blockquote {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .metrics-grid {
-    grid-template-columns: 1fr 1fr;
+  .trust-cta-btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 </style>

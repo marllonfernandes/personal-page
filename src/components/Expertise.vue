@@ -1,62 +1,88 @@
 <script setup>
 import SvgIcon from './SvgIcon.vue'
-const expertise = [
+
+const pillars = [
   {
-    title: 'Construir Aplicações Sólidas',
-    description: 'Desenvolvemos sistemas robustos, escaláveis e resilientes com boas práticas de engenharia de software e foco em qualidade.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`
+    code: 'PILAR 01',
+    title: 'Engenharia de Software & Microsserviços',
+    summary: 'Aplicações desacopladas, seguras e preparadas para alto volume transacional sem gargalos de concorrência.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`,
+    capabilities: [
+      'Design de APIs RESTful e gRPC de altíssima performance',
+      'Modernização de monólitos legados com zero downtime',
+      'Padrões de resiliência: Circuit Breaker, Retries e Event-Driven'
+    ],
+    techs: ['Node.js', 'Python (FastAPI)', '.NET Core', 'PostgreSQL', 'Redis', 'RabbitMQ']
   },
   {
-    title: 'Migração para Microsserviços',
-    description: 'Transformamos aplicações monolíticas em arquiteturas de microsserviços, garantindo desacoplamento, autonomia e facilidade de manutenção.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>`
+    code: 'PILAR 02',
+    title: 'Arquitetura Cloud & SRE (Google Cloud)',
+    summary: 'Projetos e migrações executadas por especialista certificado Google Cloud, com foco em custo e disponibilidade.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><polyline points="12 12 12 18"/><polyline points="9 15 12 12 15 15"/></svg>`,
+    capabilities: [
+      'Migração segura On-Premise → Google Cloud Platform (GCP)',
+      'Orquestração de microsserviços com Kubernetes (GKE) e Docker',
+      'Observabilidade avançada com OpenTelemetry e alertas proativos'
+    ],
+    techs: ['Google Cloud (GCP)', 'Kubernetes (GKE)', 'Docker', 'Terraform', 'OpenTelemetry', 'Datadog']
   },
   {
-    title: 'Cloud Migration (On-Premise → Cloud)',
-    description: 'Projetamos e executamos migrações de ambientes On Premise para nuvem pública, com foco em segurança, custo e performance.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><polyline points="12 12 12 18"/><polyline points="9 15 12 12 15 15"/></svg>`
-  },
-  {
-    title: 'Arquiteturas de Referência',
-    description: 'Elaboramos arquiteturas de referência para evolução das plataformas, definindo padrões técnicos e guias estratégicos de longo prazo.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>`
-  },
-  {
-    title: 'Hands-on em Projetos Estratégicos',
-    description: 'Atuamos de forma direta e colaborativa em projetos estratégicos, alinhados ao time de desenvolvimento para garantir entrega com qualidade e agilidade.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
-  },
-  {
-    title: 'Modernização de Sistemas',
-    description: 'Alavancamos a modernização tecnológica de sistemas legados, adotando novas stacks, padrões de design e práticas de engenharia modernas.',
-    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`
+    code: 'PILAR 03',
+    title: 'Inteligência Artificial & Agentes Autônomos',
+    summary: 'Automação cognitiva de ponta a ponta conectada às bases de dados, ERPs e canais de atendimento da sua empresa.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1H1a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="16.5" cy="14.5" r="1.5"/></svg>`,
+    capabilities: [
+      'Agentes autônomos com execução de ferramentas e chamadas de API',
+      'Extração inteligente de dados em contratos e documentos via OCR',
+      'Atendimento humanizado com contexto do negócio via WhatsApp'
+    ],
+    techs: ['OpenAI / Claude', 'LangChain', 'Vector DBs (pgvector)', 'WhatsApp API', 'Ollama / vLLM']
   }
-];
+]
 </script>
 
 <template>
   <section class="expertise-section" id="expertise">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Especialidades</span>
-        <h2 class="section-title">Onde Somos Referência</h2>
+        <span class="section-tag">Pilares Arquiteturais</span>
+        <h2 class="section-title">Engenharia sólida em cada linha de código</h2>
         <p class="section-subtitle">
-          Atuamos de forma estratégica e técnica para transformar desafios complexos em soluções escaláveis e modernas.
+          Não usamos soluções improvisadas. Aplicamos padrões rigorosos de engenharia, infraestrutura em nuvem e inteligência artificial para construir plataformas que não caem.
         </p>
       </div>
 
-      <div class="expertise-grid">
+      <!-- Pillars Matrix -->
+      <div class="pillars-grid">
         <div
-          v-for="(item, index) in expertise"
-          :key="index"
-          class="expertise-card"
-          :style="{ animationDelay: `${index * 0.1}s` }"
+          v-for="pillar in pillars"
+          :key="pillar.code"
+          class="pillar-card"
         >
-          <div class="card-accent"></div>
-          <SvgIcon :svg="item.icon" class="expertise-icon" />
-          <div class="expertise-content">
-            <h3 class="expertise-title">{{ item.title }}</h3>
-            <p class="expertise-description">{{ item.description }}</p>
+          <div class="pillar-top">
+            <span class="pillar-code">{{ pillar.code }}</span>
+            <div class="pillar-icon">
+              <SvgIcon :svg="pillar.icon" />
+            </div>
+          </div>
+
+          <h3 class="pillar-title">{{ pillar.title }}</h3>
+          <p class="pillar-summary">{{ pillar.summary }}</p>
+
+          <!-- Capabilities List -->
+          <ul class="capabilities-list">
+            <li v-for="(cap, i) in pillar.capabilities" :key="i">
+              <span class="cap-check">✓</span>
+              <span>{{ cap }}</span>
+            </li>
+          </ul>
+
+          <!-- Stack Chips -->
+          <div class="tech-stack-box">
+            <div class="tech-label">TECNOLOGIAS &amp; AMBIENTE:</div>
+            <div class="tech-chips">
+              <span v-for="t in pillar.techs" :key="t" class="tech-chip">{{ t }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -67,20 +93,11 @@ const expertise = [
 <style scoped>
 .expertise-section {
   padding: var(--spacing-xl) 0;
-  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
-}
-
-.expertise-section::before {
-  content: '';
-  position: absolute;
-  top: -150px;
-  right: -150px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.06) 0%, transparent 70%);
-  pointer-events: none;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .section-header {
@@ -90,123 +107,164 @@ const expertise = [
 
 .section-tag {
   display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-primary);
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  padding: 0.3rem 1rem;
+  color: #38bdf8;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  padding: 0.35rem 1rem;
   border-radius: 100px;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  max-width: 580px;
+  max-width: 640px;
   margin: var(--spacing-sm) auto 0;
   line-height: 1.7;
 }
 
-.expertise-grid {
+/* Pillars Grid */
+.pillars-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.expertise-card {
+.pillar-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 16px;
-  padding: var(--spacing-xl) var(--spacing-lg);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  padding: 2.25rem 1.75rem;
   display: flex;
-  gap: var(--spacing-md);
-  align-items: flex-start;
-  cursor: default;
-  overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 0.5s ease both;
+  flex-direction: column;
+  transition: all var(--transition-normal);
 }
 
-.expertise-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(124, 58, 237, 0.35);
-  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.12);
+.pillar-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-accent);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
-.expertise-card:hover .card-accent {
-  opacity: 1;
+.pillar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
 }
 
-.card-accent {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  border-radius: inherit;
+.pillar-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  padding: 0.22rem 0.6rem;
+  border-radius: 0.35rem;
 }
 
-.expertise-icon {
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
+.pillar-icon {
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.2);
-  border-radius: 12px;
-  color: var(--accent-primary);
-  transition: background 0.3s ease;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: 0.6rem;
+  color: #38bdf8;
+  flex-shrink: 0;
 }
 
-.expertise-card:hover .expertise-icon {
-  background: rgba(124, 58, 237, 0.2);
+.pillar-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
 }
 
-.expertise-content {
-  flex: 1;
-}
-
-.expertise-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #fff;
-  margin: 0 0 var(--spacing-sm);
-  line-height: 1.4;
-}
-
-.expertise-description {
+.pillar-summary {
   font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.7;
-  margin: 0;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.capabilities-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
 }
 
-@media (max-width: 768px) {
-  .expertise-grid {
+.capabilities-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.86rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.cap-check {
+  color: var(--accent-emerald);
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+/* Tech Stack Box */
+.tech-stack-box {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.25rem;
+}
+
+.tech-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #64748b;
+  margin-bottom: 0.65rem;
+}
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tech-chip {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.35rem;
+  transition: all var(--transition-fast);
+}
+
+.pillar-card:hover .tech-chip {
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 992px) {
+  .pillars-grid {
     grid-template-columns: 1fr;
-  }
-
-  .expertise-card {
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 1.25rem;
   }
 }
 </style>
