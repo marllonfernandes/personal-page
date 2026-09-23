@@ -22,6 +22,14 @@ const faqs = [
   {
     question: 'Como fica a segurança dos dados e o sigilo das informações (LGPD)?',
     answer: 'Segurança e conformidade são inegociáveis. Nossos agentes operam em <strong>ambientes de nuvem privados com criptografia</strong> — os dados da sua empresa e dos seus clientes <strong>nunca são compartilhados ou utilizados para treinar modelos de IA públicos</strong>. Além da conformidade total com a LGPD, assinamos <strong>Termo de Confidencialidade e Sigilo (NDA)</strong> antes de iniciar qualquer projeto.'
+  },
+  {
+    question: 'O código-fonte e a solução desenvolvida pertencem à minha empresa?',
+    answer: '<strong>Sim, 100%.</strong> Ao concluir o projeto, todo o código-fonte, infraestrutura de nuvem, banco de dados e documentação técnica são transferidos integralmente para a titularidade da sua empresa. Você tem total autonomia: <strong>não cobramos royalties, não impomos taxas ocultas de manutenção e você não fica refém de contratos de aprisionamento tecnológico (vendor lock-in)</strong>.'
+  },
+  {
+    question: 'Como vocês garantem que a IA não invente respostas ou cometa erros (alucinação)?',
+    answer: 'Nossos agentes corporativos não operam como chatbots genéricos soltos na web. Implementamos arquitetura <strong>RAG (Retrieval-Augmented Generation)</strong> com bases de conhecimento restritas aos documentos e regras da sua empresa, <strong>guardrails determinísticos</strong> que validam dados antes de qualquer resposta e mecanismos de <strong>aprovação humana (human-in-the-loop)</strong> para qualquer ação crítica ou sensível.'
   }
 ]
 
